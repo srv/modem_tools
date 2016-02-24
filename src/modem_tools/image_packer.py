@@ -49,8 +49,8 @@ import rospy
 from diagnostic_msgs.msg import KeyValue
 
 # Services
-from vehicle_interface.msg import String
-from vehicle_interface.srv import BooleanService, BooleanServiceResponse
+from std_msgs.msg import String
+from std_srvs.srv import Trigger, TriggerResponse
 
 # Constants
 TOPIC_MODEM_CONSTRUCTOR = '/modem/packer/image'
@@ -70,11 +70,11 @@ class ImagePacker(object):
         self.pub_modem = rospy.Publisher(TOPIC_MODEM_CONSTRUCTOR, String, tcp_nodelay=True, queue_size=1)
 
         # Services
-        self.srv_signal = rospy.Service(SRV_SIGNAL, BooleanService, self.handle_signal)
+        self.srv_signal = rospy.Service(SRV_SIGNAL, Trigger, self.handle_signal)
 
     def handle_signal(self, srv):
         self.go = srv.request
-        return BooleanServiceResponse(srv.request)
+        return TriggerResponse(srv.request)
 
     def generate_image_string(self):
         im = cv2.imread('diver.jpg', cv2.CV_LOAD_IMAGE_GRAYSCALE)

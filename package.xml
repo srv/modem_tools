@@ -1,0 +1,29 @@
+<package>
+  <name>modem_tools</name>
+  <version>0.0.1</version>
+  <description>modem_tools</description>
+  <maintainer email="miquel.massot@uib.cat">Miquel Massot</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/wiki/modem_tools</url>
+
+  <author>Marian Andrecki</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>auv_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>std_srvs</build_depend>
+
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>auv_msgs</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>std_srvs</run_depend>
+
+  <export>
+
+  </export>
+</package>

@@ -51,8 +51,8 @@ import rospy
 from diagnostic_msgs.msg import KeyValue
 
 # Services
-from vehicle_interface.msg import String
-from vehicle_interface.srv import BooleanService, BooleanServiceResponse
+from std_msgs.msg import String
+from std_srvs.srv import Trigger, TriggerResponse
 
 # Constants
 TOPIC_MODEM_CONSTRUCTOR = '/modem/unpacker/image'
